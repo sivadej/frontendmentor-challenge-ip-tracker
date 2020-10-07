@@ -12,7 +12,7 @@ const Map = ({ lat, lng }) => {
         <GoogleMapReact
           bootstrapURLKeys={{
             language: 'en',
-            key: '',
+            key: GOOGLE_API_KEY,
           }}
           center={center}
           defaultZoom={12}>
