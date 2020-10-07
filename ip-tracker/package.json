@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "google-map-react": "^2.1.7",
-    "ip-validator": "0.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-query": "^2.23.1",
