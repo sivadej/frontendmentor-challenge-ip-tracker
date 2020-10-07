@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
-
 const SearchBar = ({ changeIP }) => {
   const [searchText, setSearchText] = useState('');
-
-  
 
   const handleChange = (value) => {
     const newValue = value;

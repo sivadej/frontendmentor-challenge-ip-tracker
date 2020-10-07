@@ -1,3 +1,4 @@
+
 # Avoid accidental Sketch file upload 
 ###############################################
 ## Please do not remove line 5 - thanks! 🙂 ##
@@ -20,6 +21,7 @@
 /ip-tracker/node_modules
 /.pnp
 /ip-tracker/.pnp.js
+/ip-tracker/src/config.js
 
 # testing
 /coverage
