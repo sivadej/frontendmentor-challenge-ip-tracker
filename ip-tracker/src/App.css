@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  color: white;
+  font-weight: 500;
+}
+
+.main {
+  position: relative;
+}
+
+.tracker-container {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.map-container {
+  background-color: #4d0000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-image {
+  height: 250px;
+  background-image: url('./images/pattern-bg.png');
+}
+
+.map-component {
+  background-color: #c0c0c0;
+  width: 100%;
+}
+
+.google-map {
+  width: 100%;
+  height: calc(100vh - 250px);
+}
+
+.search-input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  border: 0;
+}
+
+.search-btn {
+  height: 43px;
+  width: 40px;
+  border-radius: 0 10px 10px 0;
+  border: 0;
+  background-color: black;
+  color: yellow;
+  font-size: 16px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 900px;
+  height: 80px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.results-col {
+  flex: 25%;
+  height: 100%;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.results-col + .results-col {
+  border-left: 1px solid hsl(0, 0%, 59%);
+}
+
+.result-header {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 59%);
+  letter-spacing: 1.8px;
+}
+
+.result-text {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+}
