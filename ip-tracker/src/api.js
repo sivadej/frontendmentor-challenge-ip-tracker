@@ -1,4 +1,4 @@
-import IPIFY_API_KEY from './config';
+import { IPIFY_API_KEY } from './config';
 
 const apiRequest = async (ip) => {
   console.log('fetching data for',ip)
