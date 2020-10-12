@@ -6,6 +6,7 @@ import Results from './Results';
 import SearchBar from './SearchBar';
 import apiRequest from './api';
 import { ReactQueryDevtools } from 'react-query-devtools';
+import ipValidate from './ipvalidate';
 
 const options = { refetchOnWindowFocus: false, refetchOnMount: false };
 
@@ -19,8 +20,12 @@ function App() {
   );
 
   const changeIP = (newIp) => {
-    setIp(newIp);
+    if (ipValidate(newIp)) setIp(newIp);
+    // TODO: else toggle validation warning
   };
+
+  // TODO: function toggleValidationWarning
+  // Show user message on invalid form submission
 
   useEffect(() => {
     refetch();
