@@ -18,16 +18,16 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/ip-tracker/node_modules
+/node_modules
 /.pnp
-/ip-tracker/.pnp.js
-/ip-tracker/src/config.js
+/.pnp.js
+/src/config.js
 
 # testing
 /coverage
 
 # production
-/ip-tracker/build
+/build
 
 # misc
 .DS_Store
