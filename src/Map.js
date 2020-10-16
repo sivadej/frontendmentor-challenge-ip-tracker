@@ -7,6 +7,7 @@ const Map = ({ lat, lng }) => {
   const center = { lat, lng };
 
   return (
+    (lat && lng) ? 
     <div className='map-component'>
       <div className='google-map'>
         <GoogleMapReact
@@ -20,6 +21,7 @@ const Map = ({ lat, lng }) => {
         </GoogleMapReact>
       </div>
     </div>
+    : <div>Error rendering map</div>
   );
 };
 
