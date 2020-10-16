@@ -1,7 +1,8 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './images/icon-location.svg';
-import { GOOGLE_API_KEY } from './config';
+
+const { REACT_APP_GOOGLE_API_KEY } = process.env;
 
 const Map = ({ lat, lng }) => {
   const center = { lat, lng };
@@ -13,7 +14,7 @@ const Map = ({ lat, lng }) => {
         <GoogleMapReact
           bootstrapURLKeys={{
             language: 'en',
-            key: GOOGLE_API_KEY,
+            key: REACT_APP_GOOGLE_API_KEY,
           }}
           center={center}
           defaultZoom={12}>
