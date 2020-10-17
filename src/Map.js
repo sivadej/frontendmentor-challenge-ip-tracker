@@ -4,19 +4,18 @@ import MarkerIcon from './images/icon-location.svg';
 
 const { REACT_APP_GOOGLE_API_KEY } = process.env;
 
-const Marker = ({lat,lng}) => {
+const Marker = ({ lat, lng }) => {
   return (
     <div>
       <img src={MarkerIcon} alt='Map Marker' lat={lat} lng={lng} />
     </div>
-  )
-}
+  );
+};
 
 const Map = ({ lat, lng }) => {
   const center = { lat, lng };
 
-  return (
-    (lat && lng) ? 
+  return lat && lng ? (
     <div className='map-component' data-testid='map-component'>
       <div className='google-map'>
         <GoogleMapReact
@@ -26,11 +25,12 @@ const Map = ({ lat, lng }) => {
           }}
           center={center}
           defaultZoom={12}>
-          <Marker lat={lat} lng={lng}/>
+          <Marker lat={lat} lng={lng} />
         </GoogleMapReact>
       </div>
     </div>
-    : <div>Error rendering map</div>
+  ) : (
+    <div>Error rendering map</div>
   );
 };
 

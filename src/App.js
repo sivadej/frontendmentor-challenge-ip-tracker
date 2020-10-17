@@ -36,7 +36,6 @@ function App() {
 
   return (
     <div className='main'>
-
       <div className='map-container'>
         <div className='top-image'></div>
         <Map lat={data.location.lat} lng={data.location.lng} />

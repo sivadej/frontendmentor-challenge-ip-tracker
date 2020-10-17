@@ -15,9 +15,15 @@ const SearchBar = ({ changeIP }) => {
 
   return (
     <div>
-      <form onSubmit={(e)=>handleSubmit(e)}>
-        <input className='search-input' type='text' onChange={(e) => handleChange(e.target.value)} />
-        <button className='search-btn' type='submit'>></button>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input
+          className='search-input'
+          type='text'
+          onChange={(e) => handleChange(e.target.value)}
+        />
+        <button className='search-btn' type='submit'>
+          >
+        </button>
       </form>
     </div>
   );

@@ -1,9 +1,8 @@
 import React from 'react';
 
-const Results = ({ data }) => {
+const Results = ({ data = defaultData }) => {
   return (
     <div className='results-container'>
-
       <div className='results-col'>
         <div className='result-header'>IP ADDRESS</div>
         <div className='result-text'>{data.ip}</div>
@@ -11,8 +10,10 @@ const Results = ({ data }) => {
 
       <div className='results-col'>
         <div className='result-header'>LOCATION</div>
-        <div className='result-text'>{data.location.city}, {data.location.region}{' '}
-        {data.location.postalCode}</div>
+        <div className='result-text'>
+          {data.location.city}, {data.location.region}{' '}
+          {data.location.postalCode}
+        </div>
       </div>
 
       <div className='results-col'>
@@ -24,9 +25,14 @@ const Results = ({ data }) => {
         <div className='result-header'>ISP</div>
         <div className='result-text'>{data.isp}</div>
       </div>
-      
     </div>
   );
+};
+
+const defaultData = {
+  ip: '-.-.-.-',
+  location: { city: '--', region: '', postalCode: '', timezone: '--' },
+  isp: '--',
 };
 
 export default Results;
